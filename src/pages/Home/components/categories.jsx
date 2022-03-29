@@ -45,7 +45,7 @@ const Categories = () => {
             </div>
 
             {search? <div className="category">
-                <div className="category-name"> Result for {movie1.Title} Season {search.Season} Episode {search.Episode} </div>
+                <div className="category-name" style={{color:'red'}}> Result for {movie1.Title} Season {search.Season} Episode {search.Episode} </div>
                 <div className="category-display">
                     
                         <div className="movie-item" style={{backgroundImage:'url(../../../../../assets/img2.jpg)', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
