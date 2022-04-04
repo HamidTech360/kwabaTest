@@ -40,11 +40,14 @@ input::placeholder{
 option{
     font-size: 14px;
 }
-.selected{
+.selected, #selected{
     
     border: 1px solid #8667DE !important;
     font-weight: 500 !important;
 
+}
+.circular-progress-bar-trail{
+    stroke: red;
 }
 .selected::placeholder{
     color: #8667DE !important;

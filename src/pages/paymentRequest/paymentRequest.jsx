@@ -78,7 +78,9 @@ const PaymentRequest = ({handleChange, handleStatusChange}) => {
                 <div className="form-header"> Payment Options 
                 <span className="pull-right oneofthree">
                     1 of 3 
-                    {/* <CircularProgressbar value={33} circleRatio={0.3} size={20} styles={{height:'20px'}} /> */}
+                    <div className='pull-right' style={{width:25, height:25, marginLeft:'10px'}}>
+                        <CircularProgressbar value={33} styles={{trailColor:'red', background:'red'}} />
+                    </div>
                  </span> 
                 </div>
                
@@ -90,6 +92,7 @@ const PaymentRequest = ({handleChange, handleStatusChange}) => {
                           key={i}
                           type="text" 
                           className={`form-control select-input text-center ${item.selected?'selected':''}` }
+                          id={`${item.selected?'selected':''}`}
                           readOnly 
                           placeholder={item.label} 
                           onClick={()=>SelectAccomodationStatus(i, item)}
