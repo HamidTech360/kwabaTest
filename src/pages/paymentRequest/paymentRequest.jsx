@@ -79,13 +79,17 @@ const PaymentRequest = ({handleChange, handleStatusChange}) => {
                 <span className="pull-right oneofthree">
                     1 of 3 
                     <div className='pull-right' style={{width:25, height:25, marginLeft:'10px'}}>
-                        <CircularProgressbar value={33} styles={{trailColor:'red', background:'red'}} />
+                    <CircularProgressbar value={33} strokeWidth={20} styles={{
+                        path:{
+                            stroke:'#26DC98'
+                        }
+                    }} />
                     </div>
                  </span> 
                 </div>
                
                 <div className="form-group">
-                    <label htmlFor="status">What's your accomodation status</label>
+                    <label htmlFor="status" >What's your accomodation status</label>
                    
                     {accomodationStatus.map((item, i)=>
                     <input 
