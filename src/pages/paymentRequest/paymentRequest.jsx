@@ -2,6 +2,8 @@ import React, {useState, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import UserContext from '../../context/userContext'
 import joi from 'joi-browser'
+import {CircularProgressbar} from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
 import toastr from 'toastr'
 import './css/style.css'
 
@@ -52,7 +54,7 @@ const PaymentRequest = ({handleChange, handleStatusChange}) => {
     }
 
     const handleSubmit = ()=>{
-        toastr.error('error')
+      
         const error = Validate()
         if(!error){
             console.log('Error free');
@@ -73,7 +75,12 @@ const PaymentRequest = ({handleChange, handleStatusChange}) => {
             <div className="payment-request-form">
             <div className="page-header">My Rent</div>
             <div className="box">
-                <div className="form-header">Payment Options</div>
+                <div className="form-header"> Payment Options 
+                <span className="pull-right oneofthree">
+                    1 of 3 
+                    {/* <CircularProgressbar value={33} circleRatio={0.3} size={20} styles={{height:'20px'}} /> */}
+                 </span> 
+                </div>
                
                 <div className="form-group">
                     <label htmlFor="status">What's your accomodation status</label>
